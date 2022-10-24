@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "moo-d-9afaf"
-  }
+   },
+  "targets": {},
+  "etags": {}
 }

@@ -9,4 +9,10 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="user_aggregate_message">Let\'s look back at your week as a whole</string>
+    <string name="first_aggregation_message">Your average day rating is:</string>
+    <string name="second_aggregation_message">Your overall mood this week has been:</string>
+    <string name="third_aggregation_message">Number of times you exercised this week:</string>
+    <string name="fourth_aggregation_message">Number of times you socialized this week:</string>
+    <string name="user_aggregation_label">7-Day Aggregate</string>
 </resources>

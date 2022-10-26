@@ -1,11 +1,13 @@
 package com.smhvincent.moo_d
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.smhvincent.moo_d.TodayReflectionFragmentDirections.actionTodayReflectionFragmentToAggregateFragment
 import com.smhvincent.moo_d.databinding.FragmentTodayReflectionBinding
 
 /**
@@ -18,6 +20,8 @@ class TodayReflectionFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private val viewModel by activityViewModels<AggregateViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +37,18 @@ class TodayReflectionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSubmit.setOnClickListener {
-            findNavController().navigate(R.id.action_TodayReflectionFragment_to_AggregateFragment)
+            val rating = when (binding.q1Ratings.checkedRadioButtonId) {
+                R.id.option_rating_1 -> 1
+                R.id.option_rating_2 -> 2
+                R.id.option_rating_3 -> 3
+                R.id.option_rating_4 -> 4
+                R.id.option_rating_5 -> 5
+                else -> 5
+            }
+            val action = actionTodayReflectionFragmentToAggregateFragment().apply {
+                this.rating = rating
+            }
+            findNavController().navigate(action)
         }
     }
 

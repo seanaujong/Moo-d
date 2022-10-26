@@ -17,5 +17,10 @@
     <fragment
         android:id="@+id/AggregateFragment"
         android:name="com.smhvincent.moo_d.AggregateFragment"
-        tools:layout="@layout/fragment_user_aggregate"/>
+        tools:layout="@layout/fragment_user_aggregate">
+        <argument
+            android:name="RATING"
+            app:argType="integer"
+            android:defaultValue="3"/>
+    </fragment>
 </navigation>

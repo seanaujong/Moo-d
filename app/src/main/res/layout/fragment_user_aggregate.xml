@@ -46,6 +46,7 @@
         app:layout_constraintTop_toBottomOf="@id/aggregate_message">
 
         <TextView
+            android:id="@+id/first_aggregation_tv"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="16dp"

@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.navArgs
 import com.smhvincent.moo_d.databinding.FragmentUserAggregateBinding
+import kotlin.properties.Delegates
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -17,6 +20,17 @@ class AggregateFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private val viewModel by activityViewModels<AggregateViewModel>()
+
+    private var ratingMode by Delegates.notNull<Int>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val args by navArgs<AggregateFragmentArgs>()
+        ratingMode = args.rating
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +45,7 @@ class AggregateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.firstAggregationTv.text = getString(R.string.first_aggregation_message, ratingMode)
     }
 
     override fun onDestroyView() {

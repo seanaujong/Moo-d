@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BEEDFF"
-    tools:context=".SecondFragment">
+    tools:context=".AggregateFragment">
 
     <TextView
         android:id="@+id/screen_label"
@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
+        android:background="#155872"
         android:text="@string/user_aggregation_label"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:theme="@style/Widget.Material3.Snackbar.TextView"
-        android:background = "#155872"
         android:textColor="@color/white"
+        android:theme="@style/Widget.Material3.Snackbar.TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,9 +38,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/first_aggregation"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintTop_toBottomOf="@id/aggregate_message">
@@ -51,14 +51,14 @@
             android:layout_margin="16dp"
             android:text="@string/first_aggregation_message"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/second_aggregation"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintTop_toBottomOf="@id/first_aggregation">
@@ -69,14 +69,14 @@
             android:layout_margin="16dp"
             android:text="@string/second_aggregation_message"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/third_aggregation"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintTop_toBottomOf="@id/second_aggregation">
@@ -87,14 +87,14 @@
             android:layout_margin="16dp"
             android:text="@string/third_aggregation_message"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/fourth_aggregation"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintTop_toBottomOf="@id/third_aggregation">
@@ -105,21 +105,8 @@
             android:layout_margin="16dp"
             android:text="@string/fourth_aggregation_message"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button_return_entry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        android:text="Creat new entry"
-        app:layout_constraintTop_toBottomOf="@id/fourth_aggregation"
-        app:layout_constraintStart_toStartOf="@id/fourth_aggregation"
-        app:layout_constraintEnd_toEndOf="@id/fourth_aggregation">
-    </Button>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

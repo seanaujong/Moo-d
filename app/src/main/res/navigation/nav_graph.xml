@@ -3,27 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/TodayReflectionFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.smhvincent.moo_d.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/TodayReflectionFragment"
+        android:name="com.smhvincent.moo_d.TodayReflectionFragment"
+        tools:layout="@layout/fragment_today_reflection">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_TodayReflectionFragment_to_AggregateFragment"
+            app:destination="@id/AggregateFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.smhvincent.moo_d.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/user_aggregate_fragment">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment"
-            app:launchSingleTop="false" />
-    </fragment>
+        android:id="@+id/AggregateFragment"
+        android:name="com.smhvincent.moo_d.AggregateFragment"
+        tools:layout="@layout/fragment_user_aggregate"/>
 </navigation>

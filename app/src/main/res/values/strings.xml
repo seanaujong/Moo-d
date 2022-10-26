@@ -2,17 +2,14 @@
     <string name="app_name">Moo-d</string>
     <string name="action_signout">Sign Out</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="user_aggregate_message">Let\'s look back at your week as a whole</string>
-    <string name="first_aggregation_message">Your average day rating is:</string>
-    <string name="second_aggregation_message">Your overall mood this week has been:</string>
-    <string name="third_aggregation_message">Number of times you exercised this week:</string>
-    <string name="fourth_aggregation_message">Number of times you socialized this week:</string>
+    <string name="first_aggregation_message">Most of your days were: &#128522;</string>
+    <string name="second_aggregation_message">This week\'s vibes are: &#128131;</string>
+    <string name="third_aggregation_message">Exercise Level: &#128548;</string>
+    <string name="fourth_aggregation_message">Social Level: &#127751;</string>
     <string name="user_aggregation_label">7-Day Aggregate</string>
+    <string name="create_new_entry">Create new entry</string>
 </resources>

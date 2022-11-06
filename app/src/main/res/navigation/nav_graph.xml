@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/TodayReflectionFragment"
-        android:name="com.smhvincent.moo_d.TodayReflectionFragment"
+        android:name="com.smhvincent.moo_d.reflection.TodayReflectionFragment"
         tools:layout="@layout/fragment_today_reflection">
 
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/AggregateFragment"
-        android:name="com.smhvincent.moo_d.AggregateFragment"
+        android:name="com.smhvincent.moo_d.moodaggregate.AggregateFragment"
         tools:layout="@layout/fragment_user_aggregate">
         <argument
             android:name="RATING"

@@ -1,4 +1,4 @@
-package com.smhvincent.moo_d
+package com.smhvincent.moo_d.moodaggregate
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
+import com.smhvincent.moo_d.R
 import com.smhvincent.moo_d.databinding.FragmentUserAggregateBinding
 import kotlin.properties.Delegates
 
@@ -21,7 +22,7 @@ class AggregateFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private val viewModel by activityViewModels<AggregateViewModel>()
+    private val viewModel by activityViewModels<MoodAggregateViewModel>()
 
     private var ratingMode by Delegates.notNull<Int>()
 

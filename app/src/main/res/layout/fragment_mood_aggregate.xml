@@ -63,7 +63,8 @@
                 android:layout_margin="16dp"
                 android:text="@string/first_aggregation_message"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="Most of your days were: 3"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView

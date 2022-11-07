@@ -28,4 +28,7 @@ interface MoodDatabaseDao {
 
     @Query("SELECT * FROM mood_table WHERE moodId = :key")
     fun getWithLiveData(key: Long): LiveData<Mood>
+
+    @Query("SELECT AVG(rating) FROM mood_table")
+    suspend fun getRatingAverage(): Long
 }

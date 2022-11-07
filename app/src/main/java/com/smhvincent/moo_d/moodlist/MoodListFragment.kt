@@ -35,7 +35,7 @@ class MoodListFragment : Fragment() {
 
         // recyclerview
 
-        val manager = GridLayoutManager(activity, 3)
+        val manager = GridLayoutManager(activity, 2)
         binding.moodList.layoutManager = manager
 
         val adapter = MoodAdapter(MoodListener { moodId ->

@@ -33,6 +33,10 @@ class MoodAggregateFragment : Fragment() {
         val moodAggregateViewModel =
             ViewModelProvider(this, viewModelFactory)[MoodAggregateViewModel::class.java]
 
+        moodAggregateViewModel.average.observe(viewLifecycleOwner) { average ->
+            binding.firstAggregationTv.text = getString(R.string.first_aggregation_message, average)
+        }
+
         return binding.root
 
     }

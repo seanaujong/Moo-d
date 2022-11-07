@@ -11,6 +11,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MoodAdapter(
     val clickListener: MoodListener
@@ -36,7 +38,6 @@ class MoodAdapter(
         }
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MoodViewHolder.from(parent)
     }
@@ -47,6 +48,9 @@ class MoodAdapter(
         fun bind(clickListener: MoodListener, item: Mood) {
             binding.mood = item
             binding.clickListener = clickListener
+            val date = SimpleDateFormat("MM/dd/yyyy").format(Date(item.time))
+            val text = item.rating.toString() + " on " + date
+            binding.tv.text = text
             binding.executePendingBindings()
         }
 

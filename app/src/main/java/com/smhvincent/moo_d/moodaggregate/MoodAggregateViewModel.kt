@@ -11,8 +11,8 @@ class MoodAggregateViewModel(
     val database: MoodDatabaseDao
 ): ViewModel() {
 
-    private var _average = MutableLiveData<Long>()
-    val average: LiveData<Long>
+    private var _average = MutableLiveData<Double>()
+    val average: LiveData<Double>
         get() = _average
 
     init {

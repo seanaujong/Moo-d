@@ -30,5 +30,5 @@ interface MoodDatabaseDao {
     fun getWithLiveData(key: Long): LiveData<Mood>
 
     @Query("SELECT AVG(rating) FROM mood_table")
-    suspend fun getRatingAverage(): Long
+    suspend fun getRatingAverage(): Double
 }

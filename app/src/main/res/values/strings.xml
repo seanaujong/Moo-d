@@ -12,4 +12,6 @@
     <string name="fourth_aggregation_message">Social Level: &#127751;</string>
     <string name="user_aggregation_label">7-Day Aggregate</string>
     <string name="create_new_entry">Create new entry</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

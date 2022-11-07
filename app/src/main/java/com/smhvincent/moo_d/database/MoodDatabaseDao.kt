@@ -23,6 +23,9 @@ interface MoodDatabaseDao {
     @Query("SELECT * FROM mood_table ORDER BY moodId DESC")
     fun getAllMoods(): LiveData<List<Mood>>
 
+    @Query("SELECT * FROM mood_table ORDER BY moodId DESC LIMIT 1")
+    suspend fun getLastMood(): Mood?
+
     @Query("SELECT * FROM mood_table WHERE moodId = :key")
     fun getWithLiveData(key: Long): LiveData<Mood>
 }

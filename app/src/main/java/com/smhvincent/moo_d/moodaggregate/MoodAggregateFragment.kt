@@ -17,15 +17,6 @@ import kotlin.properties.Delegates
  */
 class MoodAggregateFragment : Fragment() {
 
-    private var ratingMode by Delegates.notNull<Int>()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        val args by navArgs<MoodAggregateFragmentArgs>()
-        ratingMode = args.rating
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,16 +26,12 @@ class MoodAggregateFragment : Fragment() {
             FragmentMoodAggregateBinding.inflate(inflater, container, false)
 
         val application = requireActivity().application
-        val arguments = MoodAggregateFragmentArgs.fromBundle(requireArguments())
 
         val dataSource = MoodDatabase.getInstance(application).moodDatabaseDao
-        // TODO: send in correct mood key
-        val viewModelFactory = MoodAggregateViewModelFactory(dataSource, 0)
+        val viewModelFactory = MoodAggregateViewModelFactory(dataSource)
 
         val moodAggregateViewModel =
             ViewModelProvider(this, viewModelFactory)[MoodAggregateViewModel::class.java]
-
-
 
         return binding.root
 

@@ -18,12 +18,7 @@
     <fragment
         android:id="@+id/AggregateFragment"
         android:name="com.smhvincent.moo_d.moodaggregate.MoodAggregateFragment"
-        tools:layout="@layout/fragment_mood_aggregate">
-        <argument
-            android:name="RATING"
-            app:argType="integer"
-            android:defaultValue="3"/>
-    </fragment>
+        tools:layout="@layout/fragment_mood_aggregate"/>
     <fragment
         android:id="@+id/moodDetailFragment"
         android:name="com.smhvincent.moo_d.mooddetail.MoodDetailFragment"

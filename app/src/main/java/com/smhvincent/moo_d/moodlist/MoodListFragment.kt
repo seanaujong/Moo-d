@@ -54,8 +54,11 @@ class MoodListFragment : Fragment() {
         // buttons
 
         binding.navNewMoodButton.setOnClickListener {
-            Log.d("saujong", "navigating")
             findNavController().navigate(MoodListFragmentDirections.actionMoodListFragmentToReflectionFragment())
+        }
+
+        binding.navAggregateButton.setOnClickListener {
+            findNavController().navigate(MoodListFragmentDirections.actionMoodListFragmentToAggregateFragment())
         }
 
         return binding.root

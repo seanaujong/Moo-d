@@ -55,12 +55,12 @@ class MainActivity : AppCompatActivity() {
         unit: TimeUnit
     ) {
 
-//        val myWorkRequest = OneTimeWorkRequestBuilder<MoodReminderWorker>()
-//            .setInitialDelay(duration, unit).build()
-//
-//        WorkManager.getInstance().enqueueUniqueWork("moo-d_reminder",
-//            ExistingWorkPolicy.REPLACE,
-//            myWorkRequest)
+        val myWorkRequest = OneTimeWorkRequestBuilder<MoodReminderWorker>()
+            .setInitialDelay(duration, unit).build()
+
+        WorkManager.getInstance().enqueueUniqueWork("moo-d_reminder",
+            ExistingWorkPolicy.REPLACE,
+            myWorkRequest)
     }
 
     private fun notify(): Boolean {

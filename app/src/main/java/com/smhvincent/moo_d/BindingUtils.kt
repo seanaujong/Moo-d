@@ -4,6 +4,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.smhvincent.moo_d.database.Mood
+import java.text.SimpleDateFormat
+import java.util.*
 
 @BindingAdapter("moodImage")
 fun ImageView.setMoodImage(item: Mood?) {
@@ -20,6 +22,14 @@ fun ImageView.setMoodImage(item: Mood?) {
     }
 }
 
+@BindingAdapter("moodDateString")
+fun TextView.setMoodDateString(item: Mood?) {
+    item?.let {
+        val date = SimpleDateFormat("MM/dd/yyyy").format(Date(item.time))
+        text = resources.getString(R.string.detail_date_header, date)
+    }
+}
+
 @BindingAdapter("moodQualityString")
 fun TextView.setMoodQualityString(item: Mood?) {
     item?.let {
@@ -27,3 +37,4 @@ fun TextView.setMoodQualityString(item: Mood?) {
         text = "hahahaha"
     }
 }
+

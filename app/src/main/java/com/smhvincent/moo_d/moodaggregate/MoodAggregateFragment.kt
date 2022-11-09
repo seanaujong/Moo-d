@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.navArgs
 import com.smhvincent.moo_d.R
 import com.smhvincent.moo_d.database.MoodDatabase
 import com.smhvincent.moo_d.databinding.FragmentMoodAggregateBinding
-import kotlin.properties.Delegates
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

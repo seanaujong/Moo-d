@@ -4,11 +4,16 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import com.smhvincent.moo_d.MoodReminderWorker
 import com.smhvincent.moo_d.database.Mood
 import com.smhvincent.moo_d.database.MoodDatabaseDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.concurrent.TimeUnit
 
 class MoodListViewModel(
     val database: MoodDatabaseDao,
@@ -68,4 +73,6 @@ class MoodListViewModel(
             mood.value = null
         }
     }
+
+
 }

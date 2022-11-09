@@ -10,7 +10,11 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import com.smhvincent.moo_d.databinding.ActivityMainBinding
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,8 +45,28 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
+            R.id.action_signout -> notify()
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    internal fun scheduleReminder(
+        duration: Long,
+        unit: TimeUnit
+    ) {
+
+        val myWorkRequest = OneTimeWorkRequestBuilder<MoodReminderWorker>()
+            .setInitialDelay(duration, unit).build()
+
+        WorkManager.getInstance().enqueueUniqueWork("moo-d_reminder",
+            ExistingWorkPolicy.REPLACE,
+            myWorkRequest)
+    }
+
+    private fun notify(): Boolean {
+        scheduleReminder(5, TimeUnit.SECONDS)
+        Log.d("saujong", "notify hi")
+        return true
     }
 
     override fun onSupportNavigateUp(): Boolean {

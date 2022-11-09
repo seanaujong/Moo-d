@@ -26,7 +26,7 @@ fun ImageView.setMoodImage(item: Mood?) {
 fun TextView.setMoodDateString(item: Mood?) {
     item?.let {
         val date = SimpleDateFormat("MM/dd/yyyy").format(Date(item.time))
-        text = "Your Mood On: " + date.toString()
+        text = resources.getString(R.string.detail_date_header, date)
     }
 }
 

@@ -11,4 +11,6 @@
     <string name="action_notify">Notify in 5</string>
     <string name="channel_description">moo-d_reminder</string>
     <string name="channel_name">moo-d_channel</string>
+
+    <string name="detail_date_header">Your Mood On: %1$s</string>
 </resources>

@@ -1,9 +1,10 @@
 package com.smhvincent.moo_d.mooddetail
 
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.ViewModel
+import android.util.Log
+import androidx.lifecycle.*
 import com.smhvincent.moo_d.database.Mood
 import com.smhvincent.moo_d.database.MoodDatabaseDao
+import kotlinx.coroutines.launch
 
 class MoodDetailViewModel(
     dataSource: MoodDatabaseDao,
@@ -12,10 +13,14 @@ class MoodDetailViewModel(
 
     val database = dataSource
 
-    private val mood = MediatorLiveData<Mood>()
-    fun getMood() = mood
+    private var _mood = MutableLiveData<Mood>()
+    val mood: LiveData<Mood>
+        get() = _mood
 
     init {
-        mood.addSource(database.getWithLiveData(moodKey), mood::setValue)
+        viewModelScope.launch {
+            Log.d("saujong", moodKey.toString())
+            _mood.value = database.get(moodKey)
+        }
     }
 }

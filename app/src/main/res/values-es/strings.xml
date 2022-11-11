@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="second_aggregation_message">" Las vibras de esta semana son:"</string>
+    <string name="second_aggregation_message">Las vibras de esta semana son:</string>
+    <string name="third_aggregation_message">Nivel del ejericio:</string>
+    <string name="fourth_aggregation_message">Nivel social:</string>
+    <string name="user_aggregation_label">Perspectivas de esta semana</string>
+    <string name="create_new_entry">Crear nueva entrada</string>
+    <string name="detail_date_header">Tu estado de ánimo en:</string>
+    <string name="detail_date_header">" Tu estado de ánimo en:"</string>
+    <string name="second_aggregation_message">" Las vibras de esta semana son:"</string>
+</resources>

@@ -13,5 +13,4 @@
     <string name="channel_name" translatable="false">moo-d_channel</string>
 
     <string name="detail_date_header">Your Mood On: %1$s</string>
-    <string name="create_new_entry">C</string>
 </resources>

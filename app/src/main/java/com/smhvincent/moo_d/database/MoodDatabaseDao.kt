@@ -31,4 +31,7 @@ interface MoodDatabaseDao {
 
     @Query("SELECT AVG(rating) FROM mood_table")
     suspend fun getRatingAverage(): Double
+
+    @Query("SELECT COUNT(notes) FROM mood_table WHERE notes LIKE '%exercise%'")
+    suspend fun getExerciseCount(): Long
 }

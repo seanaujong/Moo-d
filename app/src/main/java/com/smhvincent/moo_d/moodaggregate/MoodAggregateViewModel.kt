@@ -15,9 +15,14 @@ class MoodAggregateViewModel(
     val average: LiveData<Double>
         get() = _average
 
+    private var _exercise = MutableLiveData<Long>()
+    val exercise: LiveData<Long>
+        get() = _exercise
+
     init {
         viewModelScope.launch {
             _average.value = database.getRatingAverage()
+            _exercise.value = database.getExerciseCount()
         }
     }
 }

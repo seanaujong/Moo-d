@@ -34,7 +34,7 @@ fun TextView.setMoodDateString(item: Mood?) {
 fun TextView.setMoodQualityString(item: Mood?) {
     item?.let {
         // TODO: implement
-        text = "hahahaha"
+//        text = "hahahaha"
     }
 }
 

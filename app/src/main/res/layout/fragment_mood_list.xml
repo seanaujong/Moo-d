@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/nav_new_mood_button"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Aggregate"
+            android:text="@string/aggregate"
             />
 
         <Button
@@ -29,7 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/nav_aggregate_button"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="+ Mood"
+            android:text="@string/add_mood"
             />
 
         <androidx.recyclerview.widget.RecyclerView

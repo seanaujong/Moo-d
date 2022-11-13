@@ -8,10 +8,16 @@
     <string name="fourth_aggregation_message">Social Level: &#127751;</string>
     <string name="user_aggregation_label">Your Week</string>
     <string name="create_new_entry">Create new entry</string>
-    <string name="action_notify_5">Remind me in 5 seconds</string>
+    <string name="action_notify_short">Remind me in 5 seconds</string>
     <string name="action_notify_tomorrow">Remind me tomorrow</string>
     <string name="channel_description" translatable="false">moo-d_reminder</string>
     <string name="channel_name" translatable="false">moo-d_channel</string>
 
     <string name="detail_date_header">Your Mood On: %1$s</string>
+    <string name="aggregate">Aggregate</string>
+    <string name="add_mood">Add Mood</string>
+    <string name="reflection_header">Today\'s Reflection</string>
+    <string name="reflection_prompt">Welcome Back! \n\n Let\'s take a moment to think about today</string>
+    <string name="rate_day_prompt">How would you rate your day 1-5?</string>
+    <string name="mood_input_prompt">How would you describe your mood today?</string>
 </resources>

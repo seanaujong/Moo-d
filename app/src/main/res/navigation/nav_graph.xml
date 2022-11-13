@@ -21,17 +21,15 @@
         tools:layout="@layout/fragment_mood_aggregate"/>
     <fragment
         android:id="@+id/moodDetailFragment"
-        android:name="com.smhvincent.moo_d.mooddetail.MoodDetailFragment"
-        android:label="MoodDetailFragment" >
+        android:name="com.smhvincent.moo_d.mooddetail.MoodDetailFragment">
         <argument
             android:name="moodKey"
-            app:argType="long"
-            android:defaultValue="0L" />
+            android:defaultValue="0L"
+            app:argType="long" />
     </fragment>
     <fragment
         android:id="@+id/moodListFragment"
-        android:name="com.smhvincent.moo_d.moodlist.MoodListFragment"
-        android:label="MoodListFragment" >
+        android:name="com.smhvincent.moo_d.moodlist.MoodListFragment">
         <action
             android:id="@+id/action_moodListFragment_to_moodDetailFragment"
             app:destination="@id/moodDetailFragment" />

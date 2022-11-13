@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:background="#155872"
-            android:text="Today's Reflection"
+            android:text="@string/reflection_header"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Welcome Back! \n\n Let's take a moment to think about today"
+            android:text="@string/reflection_prompt"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#424242"
             app:layout_constraintTop_toBottomOf="@id/header"
@@ -53,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:text="How would you rate your day 1-5?" />
+                    android:text="@string/rate_day_prompt" />
 
                 <RadioGroup
                     android:id="@+id/q1_ratings"
@@ -118,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:text="How would you describe your mood today?" />
+                    android:text="@string/mood_input_prompt" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textfield_mood"

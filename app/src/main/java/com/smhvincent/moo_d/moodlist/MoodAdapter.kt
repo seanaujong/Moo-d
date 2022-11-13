@@ -49,7 +49,7 @@ class MoodAdapter(
             binding.mood = item
             binding.clickListener = clickListener
             val date = SimpleDateFormat("MM/dd/yyyy").format(Date(item.time))
-            val text = item.rating.toString() + " on " + date
+            val text = item.rating.toString() + " - " + date
             binding.title.text = text
             binding.executePendingBindings()
         }

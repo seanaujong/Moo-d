@@ -34,4 +34,7 @@ interface MoodDatabaseDao {
 
     @Query("SELECT COUNT(notes) FROM mood_table WHERE notes LIKE '%exercise%'")
     suspend fun getExerciseCount(): Long
+
+    @Query("SELECT COUNT(notes) FROM mood_table WHERE notes LIKE '%fun%'")
+    suspend fun getFunCount(): Long
 }

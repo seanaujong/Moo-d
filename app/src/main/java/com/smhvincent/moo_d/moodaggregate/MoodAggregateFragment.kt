@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.smhvincent.moo_d.R
 import com.smhvincent.moo_d.database.MoodDatabase
 import com.smhvincent.moo_d.databinding.FragmentMoodAggregateBinding
+import kotlin.math.ceil
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -33,6 +34,19 @@ class MoodAggregateFragment : Fragment() {
 
         moodAggregateViewModel.average.observe(viewLifecycleOwner) { average ->
             binding.firstAggregationTv.text = getString(R.string.first_aggregation_message, average)
+            binding.secondAggregationTv.text = getString(
+                R.string.second_aggregation_message,
+                ceil(average).toLong()
+            )
+        }
+
+        moodAggregateViewModel.exercise.observe(viewLifecycleOwner) { exercise ->
+            binding.thirdAggregationTv.text =
+                getString(R.string.third_aggregation_message, exercise)
+        }
+
+        moodAggregateViewModel.func.observe(viewLifecycleOwner) { func ->
+            binding.fourthAggregationTv.text = getString(R.string.fourth_aggregation_message, func)
         }
 
         return binding.root

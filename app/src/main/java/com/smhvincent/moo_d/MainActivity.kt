@@ -1,6 +1,5 @@
 package com.smhvincent.moo_d
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -45,7 +44,8 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_signout -> notify()
+            R.id.action_notify_short -> notify(5, TimeUnit.SECONDS)
+            R.id.action_notify_tomorrow -> notify(1, TimeUnit.DAYS)
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -63,9 +63,8 @@ class MainActivity : AppCompatActivity() {
             myWorkRequest)
     }
 
-    private fun notify(): Boolean {
-        scheduleReminder(5, TimeUnit.SECONDS)
-        Log.d("saujong", "notify hi")
+    private fun notify(duration: Long, unit: TimeUnit): Boolean {
+        scheduleReminder(duration, unit)
         return true
     }
 

@@ -3,8 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.smhvincent.moo_d.MainActivity">
     <item
-        android:id="@+id/action_signout"
+        android:id="@+id/action_notify_short"
         android:orderInCategory="100"
-        android:title="@string/action_notify"
+        android:title="@string/action_notify_5"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notify_tomorrow"
+        android:orderInCategory="101"
+        android:title="@string/action_notify_tomorrow"
         app:showAsAction="never" />
 </menu>

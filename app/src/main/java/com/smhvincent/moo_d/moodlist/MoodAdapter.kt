@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.smhvincent.moo_d.R
 import com.smhvincent.moo_d.database.Mood
 import com.smhvincent.moo_d.databinding.ListItemMoodBinding
 import kotlinx.coroutines.CoroutineScope
@@ -51,7 +52,28 @@ class MoodAdapter(
             val date = SimpleDateFormat("MM/dd/yyyy").format(Date(item.time))
             val text = item.rating.toString() + " - " + date
             binding.title.text = text
+            setImageView(binding, item)
             binding.executePendingBindings()
+        }
+
+        fun setImageView(binding: ListItemMoodBinding, item: Mood){
+            when(item.rating){
+                1 -> {
+                    binding.qualityImage.setImageResource(R.drawable.cow_1)
+                }
+                2 -> {
+                    binding.qualityImage.setImageResource(R.drawable.cow_2)
+                }
+                3 -> {
+                    binding.qualityImage.setImageResource(R.drawable.cow_3)
+                }
+                4 -> {
+                    binding.qualityImage.setImageResource(R.drawable.cow_4)
+                }
+                5 -> {
+                    binding.qualityImage.setImageResource(R.drawable.cow_5)
+                }
+            }
         }
 
         companion object {

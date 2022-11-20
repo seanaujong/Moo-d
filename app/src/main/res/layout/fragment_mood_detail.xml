@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Data to make available to the XML via data binding. In this case,
          the whole ViewModel, so that we can access the LiveData,
          click handlers, and state variables. -->
     <data>
+
         <variable
             name="moodDetailViewModel"
             type="com.smhvincent.moo_d.mooddetail.MoodDetailViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#BEEDFF"
-        tools:context=".mooddetail.MoodDetailFragment">
+        android:fillViewport="true">
 
-        <TextView
-            style="@style/Widget.Material3.Snackbar.TextView"
-            android:id="@+id/screen_label"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            android:background="#155872"
-            app:moodDateString="@{moodDetailViewModel.mood}"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:background="#BEEDFF"
+            tools:context=".mooddetail.MoodDetailFragment">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mood_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:layout_constraintTop_toBottomOf="@id/screen_label">
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/screen_label"
+                style="@style/Widget.Material3.Snackbar.TextView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="#155872"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:moodDateString="@{moodDetailViewModel.mood}" />
 
-                <TextView
-                    android:id="@+id/mood_detail_mood"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mood_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/screen_label">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textAlignment= "viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:text="@{Integer.toString(moodDetailViewModel.mood.rating)}" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/mood_detail_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="@{moodDetailViewModel.mood.notes}"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    />
+                    <ImageView
+                        android:id="@+id/mood_detail_mood"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="16dp"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:moodIcon="@{moodDetailViewModel.mood}" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/mood_detail_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="@{moodDetailViewModel.mood.notes}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

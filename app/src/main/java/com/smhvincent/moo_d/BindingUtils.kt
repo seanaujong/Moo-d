@@ -30,11 +30,18 @@ fun TextView.setMoodDateString(item: Mood?) {
     }
 }
 
-@BindingAdapter("moodQualityString")
-fun TextView.setMoodQualityString(item: Mood?) {
+@BindingAdapter("moodIcon")
+fun ImageView.setMoodIcon(item: Mood?) {
     item?.let {
-        // TODO: implement
-//        text = "hahahaha"
+        val image = when (it.rating) {
+            1 -> R.drawable.cow_1
+            2 -> R.drawable.cow_2
+            3 -> R.drawable.cow_3
+            4 -> R.drawable.cow_4
+            5 -> R.drawable.cow_5
+            else -> R.drawable.cow_1
+        }
+        this.setImageResource(image)
     }
 }
 

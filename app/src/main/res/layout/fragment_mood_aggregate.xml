@@ -12,116 +12,123 @@
             type="com.smhvincent.moo_d.moodaggregate.MoodAggregateViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#BEEDFF"
-        tools:context=".moodaggregate.MoodAggregateFragment">
+        tools:context=".MainActivity">
 
-        <TextView
-            style="@style/Widget.Material3.Snackbar.TextView"
-            android:id="@+id/screen_label"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            android:background="#155872"
-            android:text="@string/user_aggregation_label"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/aggregate_message"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/user_aggregate_message"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/screen_label" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/first_aggregation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:layout_constraintTop_toBottomOf="@id/aggregate_message">
+            android:layout_height="match_parent"
+            android:background="#BEEDFF"
+            tools:context=".moodaggregate.MoodAggregateFragment">
 
             <TextView
-                android:id="@+id/first_aggregation_tv"
+                android:id="@+id/screen_label"
+                style="@style/Widget.Material3.Snackbar.TextView"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_margin="16dp"
-                android:text="@string/first_aggregation_message"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="#155872"
+                android:text="@string/user_aggregation_label"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="Most of your days were: 3"/>
-        </androidx.cardview.widget.CardView>
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/second_aggregation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:layout_constraintTop_toBottomOf="@id/first_aggregation">
-
-            <ImageView
-                android:id="@+id/second_aggregation_iv"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_margin="16dp"
-                android:src="@color/black"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/third_aggregation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:layout_constraintTop_toBottomOf="@id/second_aggregation">
 
             <TextView
-                android:id="@+id/third_aggregation_tv"
+                android:id="@+id/aggregate_message"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="@string/third_aggregation_message"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-        </androidx.cardview.widget.CardView>
+                android:text="@string/user_aggregate_message"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/screen_label" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/fourth_aggregation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:layout_constraintTop_toBottomOf="@id/third_aggregation">
-
-            <TextView
-                android:id="@+id/fourth_aggregation_tv"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/first_aggregation"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:text="@string/fourth_aggregation_message"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-        </androidx.cardview.widget.CardView>
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/aggregate_message">
+
+                <TextView
+                    android:id="@+id/first_aggregation_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/first_aggregation_message"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="Most of your days were: 3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/second_aggregation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/first_aggregation">
+
+                <ImageView
+                    android:id="@+id/second_aggregation_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="16dp"
+                    android:src="@color/black" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/third_aggregation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/second_aggregation">
+
+                <TextView
+                    android:id="@+id/third_aggregation_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/third_aggregation_message"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fourth_aggregation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/third_aggregation">
+
+                <TextView
+                    android:id="@+id/fourth_aggregation_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/fourth_aggregation_message"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </androidx.cardview.widget.CardView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 </layout>

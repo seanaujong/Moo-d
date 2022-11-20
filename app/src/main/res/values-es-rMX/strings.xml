@@ -3,7 +3,7 @@
     <string name="app_name">Moo-d</string>
     <string name="third_aggregation_message">Nivel del ejericio: %1$d</string>
     <string name="second_aggregation_message">Las vibras de esta semana son: %1$d</string>
-    <string name="first_aggregation_message">La mayoría de tus días fueron: %1$.2f</string>
+    <string name="first_aggregation_message">La mayoría de tus días fueron: %1$s</string>
     <string name="user_aggregate_message">Echemos un vistazo a su semana como un todo:</string>
     <string name="fourth_aggregation_message">Nivel social: %1$d</string>
     <string name="create_new_entry">"Crear nueva entrada "</string>
@@ -17,4 +17,9 @@
     <string name="reflection_prompt">¡Bienvenido de nuevo! \n\n Tomemos un momento para pensar en el día de hoy</string>
     <string name="rate_day_prompt">¿Cómo calificaría su día 1-5?</string>
     <string name="mood_input_prompt">¿Cómo describirías tu estado de ánimo hoy?</string>
+    <string name="average_1">un poco de lucha</string>
+    <string name="average_2">No la peor, podría ser mejor.</string>
+    <string name="average_3">tal y tal</string>
+    <string name="average_4">sintiendose bien</string>
+    <string name="average_5">nunca he estado mejor</string>
 </resources>

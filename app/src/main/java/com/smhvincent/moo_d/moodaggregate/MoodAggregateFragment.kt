@@ -33,11 +33,25 @@ class MoodAggregateFragment : Fragment() {
             ViewModelProvider(this, viewModelFactory)[MoodAggregateViewModel::class.java]
 
         moodAggregateViewModel.average.observe(viewLifecycleOwner) { average ->
-            binding.firstAggregationTv.text = getString(R.string.first_aggregation_message, average)
-            binding.secondAggregationTv.text = getString(
-                R.string.second_aggregation_message,
-                ceil(average).toLong()
-            )
+            val roundup = ceil(average).toInt()
+            val text = when (roundup) {
+                1 -> getString(R.string.average_1)
+                2 -> getString(R.string.average_2)
+                3 -> getString(R.string.average_3)
+                4 -> getString(R.string.average_4)
+                5 -> getString(R.string.average_5)
+                else -> ""
+            }
+            val image = when (roundup) {
+                1 -> R.drawable.cow_1
+                2 -> R.drawable.cow_2
+                3 -> R.drawable.cow_3
+                4 -> R.drawable.cow_4
+                5 -> R.drawable.cow_5
+                else -> R.drawable.cow_1
+            }
+            binding.firstAggregationTv.text = getString(R.string.first_aggregation_message, text)
+            binding.secondAggregationIv.setImageResource(image)
         }
 
         moodAggregateViewModel.exercise.observe(viewLifecycleOwner) { exercise ->

@@ -56,7 +56,7 @@ class MoodAdapter(
             binding.executePendingBindings()
         }
 
-        fun setImageView(binding: ListItemMoodBinding, item: Mood){
+        private fun setImageView(binding: ListItemMoodBinding, item: Mood){
             when(item.rating){
                 1 -> {
                     binding.qualityImage.setImageResource(R.drawable.cow_1)

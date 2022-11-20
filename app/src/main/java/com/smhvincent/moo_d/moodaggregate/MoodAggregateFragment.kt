@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.smhvincent.moo_d.R
 import com.smhvincent.moo_d.database.MoodDatabase
 import com.smhvincent.moo_d.databinding.FragmentMoodAggregateBinding
+import kotlinx.coroutines.NonCancellable.start
 import kotlin.math.ceil
 
 
@@ -69,18 +70,17 @@ class MoodAggregateFragment : Fragment() {
                 getString(com.smhvincent.moo_d.R.string.fourth_aggregation_message, func)
         }
 
-        val scaleDown: ObjectAnimator = ObjectAnimator.ofPropertyValuesHolder(
+        ObjectAnimator.ofPropertyValuesHolder(
             binding.secondAggregationIv,
-            PropertyValuesHolder.ofFloat("scaleX", 1.2f),
-            PropertyValuesHolder.ofFloat("scaleY", 1.2f)
-        )
-        scaleDown.duration = 310
-
-        scaleDown.repeatCount = ObjectAnimator.INFINITE
-        scaleDown.repeatMode = ObjectAnimator.REVERSE
-        scaleDown.interpolator = FastOutSlowInInterpolator()
-
-        scaleDown.start()
+            PropertyValuesHolder.ofFloat("scaleX", 1.05f),
+            PropertyValuesHolder.ofFloat("scaleY", 1.05f)
+        ).apply {
+            duration = 310
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+            interpolator = FastOutSlowInInterpolator()
+            start()
+        }
 
         return binding.root
 

@@ -60,7 +60,8 @@
                         android:layout_margin="16dp"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:moodIcon="@{moodDetailViewModel.mood}" />
+                        app:moodIcon="@{moodDetailViewModel.mood}"
+                        android:contentDescription="mood icon" />
 
                     <TextView
                         android:id="@+id/mood_detail_description"

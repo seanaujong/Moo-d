@@ -25,4 +25,5 @@
     <string name="average_4">feeling well</string>
     <string name="average_5">never been better</string>
     <string name="average_1">a bit of a struggle</string>
+    <string name="submit">submit</string>
 </resources>

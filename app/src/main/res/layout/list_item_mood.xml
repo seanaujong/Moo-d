@@ -36,7 +36,8 @@
                 android:gravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/ic_baseline_edit_calendar_24" />
+                android:src="@drawable/ic_baseline_edit_calendar_24"
+                android:contentDescription="icon" />
 
 
 

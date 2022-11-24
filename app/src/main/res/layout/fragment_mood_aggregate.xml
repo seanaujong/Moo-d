@@ -86,7 +86,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="75dp"
                     android:layout_margin="16dp"
-                    android:src="@color/black" />
+                    android:src="@color/black"
+                    android:contentDescription="@string/second_aggregation_message" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
